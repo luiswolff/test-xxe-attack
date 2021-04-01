@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book [
+<!ELEMENT book (title?,author?)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ENTITY xxe SYSTEM "xxe.txt">
+]>
+<book>
+	<title>Test</title>
+	<author>Ich &xxe;</author>
+</book>
